@@ -1,0 +1,26 @@
+From 7e2d4fd89464f452da4329a1fa8679d3f68c473a Mon Sep 17 00:00:00 2001
+From: michaelBelsanti <quasigod-io@protonmail.com>
+Date: Sun, 30 Jul 2023 01:05:53 -0400
+Subject: [PATCH] nix
+
+---
+ package.json | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/package.json b/package.json
+index a98b6fd..49ceeb0 100644
+--- a/package.json
++++ b/package.json
+@@ -19,6 +19,9 @@
+     "migration:run:postgres": "rimraf dist && pnpm run build && typeorm -d dist/database/migrations/postgres.migration-config.js migration:run",
+     "migration:revert:postgres": "rimraf dist && pnpm run build && typeorm -d dist/database/migrations/postgres.migration-config.js migration:revert"
+   },
++  "bin": {
++    "gamevault": "dist/main.js"
++  },
+   "dependencies": {
+     "@nestjs/axios": "^3.0.0",
+     "@nestjs/common": "^10.0.5",
+-- 
+2.41.0
+

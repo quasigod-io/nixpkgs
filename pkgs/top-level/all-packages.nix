@@ -31769,6 +31769,8 @@ with pkgs;
   fvwm2 = callPackage ../applications/window-managers/fvwm/2.6.nix { };
   fvwm3 = callPackage ../applications/window-managers/fvwm/3.nix { };
 
+  gamevault = callPackage ../applications/misc/gamevault { };
+
   ganttproject-bin = callPackage ../applications/misc/ganttproject-bin { };
 
   gaucheBootstrap = darwin.apple_sdk_11_0.callPackage ../development/interpreters/gauche/boot.nix { };
